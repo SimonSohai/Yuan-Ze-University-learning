@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>討論與自學網站</title>
+	<style type="text/css">
+:root{
+    --hoverColor: rgb(239, 56, 126);
+}
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		#menu_control{
+			position: absolute;
+			z-index: -2;
+			opacity: 0;
+		}
+		.header{
+			position: sticky;
+        		top: 0px;
+			height: 50px;
+		}
+		img{
+			height: auto;
+          	max-width: 100%;
+			border-radius: 1rem;
+		}
+		.logo{
+			width: 60px;
+			height: 40px;
+			margin-left: 10px;
+		}
+		.log a{
+			display: block;
+			height: 40px;
+		}
+		.logo img{
+			display: block;
+		}
+		.menu_btn{
+			width: 40px;
+			height: 40px;
+			background-color:#000 ;
+			display: block;
+			position: absolute;
+			top: 5px;
+			right: 10px;
+			border-radius: 0.5rem;
+		}
+		.menu_btn span{
+			opacity: 0;
+			width: 1px;
+			height: 1px;
+			display: block;
+			overflow: hidden;
+		}
+		.menu_btn::before{
+			content: '';
+			position: absolute;
+			height: 2px;
+			left: 2px;
+			width: 36px;
+			background-color: #ccc;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			box-shadow: 0px 8px 0px #ccc,
+						0px -8px 0px #ccc;
+		}
+		nav{
+			width: 40%;
+			height: 274px;
+			background-color: rgba(237, 148, 148, 0.941);
+			position: absolute;
+			top: 50px;
+			right: -100%;
+			transition: .8s;
+			border-radius: 0.5rem;
+		}
+		nav a:hover {
+        background-color: white;
+        color: rgba(237, 148, 148, 0.941);
+        }
+		nav a{
+			display: block;
+			text-decoration: none;
+			color:white ;
+			padding: 10px 20px;
+			border-bottom: 1px solid white;
+            background-color: palevioletred;
+			border-radius: 0.5rem;
+			border: 2px solid var(--hoverColor);
+		}
+		#menu_control:checked ~ .header nav{
+			right: 0;
+		}
+		@media screen and (min-width:768px){
+			.menu_btn{display: none;}
+			body { 
+            width: 30%;
+            margin: 0 auto;}
+        main {
+            height: auto;
+          	max-width: 100%;
+        }
+			.header{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			nav{
+				position: relative;
+				right: 0;
+				display: flex;
+				width: auto;
+				height: auto;
+				top: 0;
+				background-color: transparent;
+			}
+			nav a{
+				border-bottom: none;
+			}
+		}
+		body {
+            width: 100%; 	
+            margin: 0 auto;
+        }	
+        header {
+            display:flex;justify-content: center;align-items: center;
+            width: 100%;
+            height: 80px;	  
+            		
+        }	
+        main {
+            width: 49%;
+            height: 400px;
+            float: left;	
+        }
+        aside {
+            width: 49%;
+            height: 400px;		
+            float: right;	
+        }
+		#background{
+			width: 100%;
+			height: 150%;
+		}
+		.A{
+			width: 100%;
+			min-width: 600px;
+			max-width: 960px;
+			margin: 0 auto;
+			min-height: 100vh;
+			text-align: center;
+			font-weight: bold;
+			justify-content: center;
+			flex-direction: row;
+			align-content: center;
+			flex-wrap: wrap;
+		}
+		.B{
+			width: 100%;
+			min-width: 600px;
+			max-width: 960px;
+			margin: 0 auto;
+		}
+        .C{
+			width: 100%;
+			min-width: 600px;
+			max-width: 960px;
+			margin: 0 auto;
+            background-color: #ccc;
+            border-radius: 0.5rem;
+		}
+	</style>
+</head>
+<body id="background">
+
+    <div class="B">
+	<header><h1 style="color: white;">網站介紹</h1></header>
+	<input type="checkbox" name="" id="menu_control">
+
+	<div class="header">
+		<h1 class="logo">
+			<a href="https://simonsohai.github.io/Yuan-Ze-University/%E4%BD%9C%E5%93%81%E6%88%90%E6%9E%9C%E8%88%87%E5%80%8B%E4%BA%BA%E5%AD%97%E4%BB%8B.html">
+				<img  style="width: 45px;height: 45px;" src="https://i.imgur.com/tCLFr5w.png"></a>
+		</h1>
+		<label for="menu_control" class="menu_btn">
+			<span>選單</span>
+		</label>
+		<nav>
+			<a href="https://simonsohai.github.io/Tamkang-University-book-review/%E6%9B%B8%E5%AF%A9%E6%9F%A5%E9%96%B1.html" >書審</a>
+			<a href="https://simonsohai.github.io/Tamkang-University-myself/%E8%87%AA%E6%88%91%E4%BB%8B%E7%B4%B9.html">個人介紹</a>
+			<a href="https://simonsohai.github.io/Tamkang-University-learning/%E8%87%AA%E5%AD%B8%E7%B6%B2%E7%AB%99.html">討論與自學網站</a>
+			<a href="https://simonsohai.github.io/Tamkang-University-01/%E8%AD%89%E7%85%A7.html">證照</a>
+			<a href="https://drive.google.com/file/d/1phBzw7RRp3PUlyhSIqLSb5JGA9CThrzB/view?usp=sharing">專題製作</a>
+			<a href="https://simonsohai.github.io/Tamkang-University-phone-num/%E8%81%AF%E7%B5%A1%E8%B3%87%E8%A8%8A.html">聯絡資訊</a>
+			</nav>
+	</div>
+    <div class="C">
+<h1>討論與自學網站</h1>
+<h2><p>iTSA程式自學平臺</p></h2>
+<p><img src="https://i.postimg.cc/yxWmjnHk/image.png" alt=""><br></p>
+<p>官方網站： <a href="https://e-tutor.itsa.org.tw/" target="_blank">https://e-tutor.itsa.org.tw/</a></p>
+<h3><p>iTSA是由教育部所開發的自學平台，並與各大名校合作，網站內擁有數十種的教育方案及練習題庫可供學生自主練習，也會定時舉辦跨校競賽，是個非常人性化的一個網站，想必我一再這個網站一定能學到很多程式語言的知識。</p></h3>
+
+<h2><p>Coursera</p></h2>
+<p><img src="https://i.postimg.cc/nLVzvVv6/image.png" alt=""><br></p>
+<p>官方網站： <a href="https://www.coursera.org/" target="_blank">https://www.coursera.org/</a></p>
+<p>我所修的課程： <a href="https://www.coursera.org/learn/c-bian-cheng/home/info" target="_blank">https://www.coursera.org/learn/c-bian-cheng/home/info</a></p>
+<h3><p>Coursera是個全球性的大型自學網站，課程大多由各國知名大專院校所設立，舉凡美國耶魯大學、英國劍橋大學、澳洲墨爾本大學、中國北京大學等<br>這些課程相對較理論及學術導向，課程也比較多實務操作及經驗分享。</p></h3>
+
+<h2><p>GitHub</p></h2>
+<p><img src="https://i.postimg.cc/mDVy8n9D/image.png" alt=""><br></p>
+<p>官方網站： <a href="https://github.com/" target="_blank">https://github.com/</a></p>
+<h3><p>Github 是一個透過協同合作方式的軟體開發平台，它提供了問題討論、版本控管、持續整合與持續部屬…等功能，讓團隊成員以撰寫程式或文件進而幫助人們解決問題。<br>我可以在上面的開源專案給予建議、舉報錯誤、提出問題或提供解決方法，貢獻心力給開源專案，協助有需要的人們解決他們的問題。</p></h3>
+
+<h2><p>Reddit</p></h2>
+<p><img src="http://www.finereport.com/tw/wp-content/themes/BusinessNews/images/Reddit-Programming.png" alt=""><br></p>
+<p>官方網站： <a href="http://www.reddit.com/r/programming" target="_blank">http://www.reddit.com/r/programming</a></p>
+<h3><p>可以和其他程式工程師討論一些編程開發的問題和當前的IT熱點資訊，reddit是一個用戶粘性比較強的開放社區</p></h3>
+
+<h2><p>CodeProject</p></h2>
+<p><img src="http://www.finereport.com/tw/wp-content/themes/BusinessNews/images/CodeProject.png" alt=""></p>
+<p>官方網站： <a href="http://www.codeproject.com/" target="_blank">http://www.codeproject.com/</a></p>
+<h3><p>在codeproject里，可以將代碼分享給朋友們。和其他社區不同的是，codeproject更加側重軟體開發，比如C, C#, C++, Java, Lisp等開發。</p></h3>
+
+<h2><p>Hacker News</p></h2>
+<p><img src="http://www.finereport.com/tw/wp-content/themes/BusinessNews/images/Hacker-News.png" alt=""></p>
+<p>官方網站： <a href="https://news.ycombinator.com/news" target="_blank">https://news.ycombinator.com/news</a></p>
+<h3><p>可以實時看到編程界中發生的任何事情，包括一些學習的資源和教程。也可以從用戶提交的資料中找到適合自己的學習資源</p></h3>
+
+<h2><p>DZone</p></h2>
+<p><img src="http://www.finereport.com/tw/wp-content/themes/BusinessNews/images/DZone.png" alt=""></p>
+<p>官方網站： <a href="http://www.dzone.com/links/index.html" target="_blank">http://www.dzone.com/links/index.html</a></p>
+<h3><p>DZone是一個允許用戶分享最新IT新聞和編程資源的社區，這是一個文章內容驅動的社區</p></h3>
+
+<h2><p>Bytes</p></h2>
+<p><img src="http://www.finereport.com/tw/wp-content/themes/BusinessNews/images/Bytes.png" alt=""></p>
+<p>官方網站： <a href="http://bytes.com/" target="_blank">http://bytes.com/</a></p>
+<h3><p>Bytes是一個傳統的開發社區，新手和專家都可以在裡面討論一些關於軟體開發、資料庫開發以及網路和系統管理的問題。</p></h3>
+
+<h2><p>DaniWeb</p></h2>
+<p><img src="http://www.finereport.com/tw/wp-content/themes/BusinessNews/images/DaniWeb.png" alt=""></p>
+<p>官方網站： <a href="http://www.daniweb.com/" target="_blank">http://www.daniweb.com/</a></p>
+<h3><p>DaniWeb以前是專為市場營銷業務分析人員設計的，但是現在主要為各個年齡段的Web開發者和程式工程師服務。</p></h3>
+
+<h2><p>Dream In Code</p></h2>
+<p><img src="http://www.finereport.com/tw/wp-content/themes/BusinessNews/images/Dream.In_.Code_.png" alt=""></p>
+<p>官方網站： <a href="http://www.dreamincode.net/forums/" target="_blank">http://www.dreamincode.net/forums/</a></p>
+<h3><p>主要也是以分享的方式讓人觀摩以學習的開放型社區，內容涵蓋 Java, C++, VB.NET等，學習資源相當豐富。</p></h3>
+
+<h2><p>Tech.Pro</p></h2>
+<p><img src="http://www.finereport.com/tw/wp-content/themes/BusinessNews/images/Tech.Pro_.png" alt=""></p>
+<p>官方網站： <a href="http://tech.pro/" target="_blank">http://tech.pro/</a></p>
+<h3><p>Tech.pro是一個關注科技領域發展的相關資訊的社區，Tech.pro是一個獲取資源和教程的入門網站，包含一些技術教程、討論等。</p></h3>
+
+<h2><p>Pineapple</p></h2>
+<p><img src="http://www.finereport.com/tw/wp-content/themes/BusinessNews/images/Pineapple.png" alt=""></p>
+<p>官方網站： <a href="http://pineapple.io/" target="_blank">http://pineapple.io/</a></p>
+<h3><p>但是這裡也包含很多有用的工具、教程以及類庫資源等。</p></h3>
+
+<h2><p>Lobsters</p></h2>
+<p><img src="http://www.finereport.com/tw/wp-content/themes/BusinessNews/images/Lobsters.png" alt=""></p>
+<p>官方網站： <a href="https://lobste.rs/" target="_blank">https://lobste.rs/</a></p>
+<h3><p>這是一個用戶邀請制的開發社區，是一個真正「面向社交」的社區，你可以在裡面找到大量的關於編程的任何討論。</p></h3>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+        <script>
+VANTA.GLOBE({
+  el: "#background",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0xfcfcfc,
+  backgroundColor: 0x449393
+})
+        </script>
+</body>
+</html>
